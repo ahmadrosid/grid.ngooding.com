@@ -55,7 +55,7 @@
       <h1 class="text-2xl font-bold text-white">LinkedIn Activity Grid</h1>
     </div>
     <div
-      class="bg-white/5 border border-white/10 p-6 rounded-lg overflow-x-scroll"
+      class="bg-white/5 border border-white/10 p-6 rounded-lg overflow-x-auto"
     >
       <table>
         <tbody>
