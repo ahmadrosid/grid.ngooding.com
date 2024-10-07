@@ -14,7 +14,7 @@
     >
     source code available on 
     <a
-      href="https://github.com/ahmadrosid/linkedin-grid"
+      href="https://github.com/ahmadrosid/grid.ngooding.com"
       target="_blank"
       rel="noreferrer"
       class="font-medium underline underline-offset-4">GitHub</a>
