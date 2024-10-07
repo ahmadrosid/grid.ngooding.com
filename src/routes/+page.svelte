@@ -85,7 +85,7 @@
   });
 </script>
 
-<div class="bg-slate-900 h-screen w-screen p-8">
+<div class="w-screen p-8">
   <div class="mx-auto max-w-[45rem] w-full">
     <div class="text-center pb-6">
       <h1 class="text-2xl font-bold text-white">LinkedIn Activity Grid</h1>
