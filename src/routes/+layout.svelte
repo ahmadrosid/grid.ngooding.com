@@ -10,7 +10,7 @@
       href="https://twitter.com/_ahmadrosid"
       target="_blank"
       rel="noreferrer"
-      class="font-medium underline underline-offset-4">ahmadrosid</a
+      class="font-medium underline underline-offset-4">ahmadrosid.</a
     >
     source code available on 
     <a
