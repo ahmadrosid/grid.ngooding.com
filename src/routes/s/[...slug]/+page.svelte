@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from "$app/stores";
   import { onMount } from "svelte";
 
   let activity = [];
@@ -7,6 +8,7 @@
 
   function getMonthName(month: number) {
     if (month > 11) {
+      // if month is greather than 11, I wan to reset it to january and return the month name
       month = month % 12;
     }
     const monthNames = [
@@ -31,8 +33,13 @@
     return dayNames[day];
   }
 
+  $: slug = $page.params.slug;
+
   onMount(() => {
-    fetch('https://opensheet.elk.sh/1zYJ-Ad-wMJeucV6jpXlQTz_I4Cjy1PgfGWUesXP_XJY/1')
+    if (!slug) {
+      return;
+    }
+    fetch("https://opensheet.elk.sh/" + slug)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
@@ -79,7 +86,6 @@
         grid = generateDateGrid();
         startDate = grid[0][0];
         activity = data;
-        console.log(startDate);
       })
       .catch((error) => console.error("Error:", error));
   });
@@ -114,7 +120,7 @@
             {#each grid as days, idx}
               <tr>
                 <td>
-                    {#if (startDate.getDay() % idx) === 0 || idx === 2 || idx === 4}
+                    {#if idx === 0 || idx === 2 || idx === 4}
                     <div class="pr-2 h-[10px]">
                         <span class="text-xs text-white relative">{getDayName(idx)}</span>
                     </div>
