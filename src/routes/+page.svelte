@@ -114,9 +114,9 @@
             {#each grid as days, idx}
               <tr>
                 <td>
-                    {#if (startDate.getDay() % idx) === 0 || idx === 2 || idx === 4}
+                    {#if idx === 0 || idx === 2 || idx === 4} 
                     <div class="pr-2 h-[10px]">
-                        <span class="text-xs text-white relative">{getDayName(idx)}</span>
+                        <span class="text-xs text-white relative">{getDayName(idx+1)}</span>
                     </div>
                     {/if}
                 </td>
